@@ -13,3 +13,7 @@ hugo
 # Run a development server
 hugo server
 ```
+
+## Content
+
+Open the [content](./content) folder to edit the site content.
