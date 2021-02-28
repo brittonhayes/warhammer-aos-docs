@@ -1,0 +1,100 @@
+@import 'docuapi_overrides';
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+.content {
+  // prevent clearing of highlight divs
+  & > div.highlight {
+    clear: none;
+  }
+}
+
+// BACKGROUND COLORS
+////////////////////
+$nav-bg: #0b090a !default;
+$examples-bg: #161a1d !default;
+$code-bg: #161a1d !default;
+$code-annotation-bg: #161a1d !default;
+$nav-subitem-bg: #1E2224 !default;
+$nav-active-bg: #ef233c !default;
+$nav-active-parent-bg: #210306 !default; // parent links of the current section
+$lang-select-border: #000 !default;
+$lang-select-bg: #e5383b !default;
+$lang-select-active-bg: $examples-bg !default; // feel free to change this to blue or something
+$lang-select-pressed-bg: #111 !default; // color of language tab bg when mouse is pressed
+$main-bg: #F3F7F9 !default;
+$aside-notice-bg: #98c9ea !default;
+$aside-warning-bg: #e96262 !default;
+$aside-success-bg: #6ac174 !default;
+$search-notice-bg: #c97a7e !default;
+
+// TEXT COLORS
+////////////////////
+$main-text: #1c1c1c !default; // main content text color
+$nav-text: #fff !default;
+$nav-active-text: #fff !default;
+$nav-active-parent-text: #fff !default; // parent links of the current section
+$lang-select-text: #fff !default; // color of unselected language tab text
+$lang-select-active-text: #fff !default; // color of selected language tab text
+$lang-select-pressed-text: #fff !default; // color of language tab text when mouse is pressed
+
+
+// SIZES
+////////////////////
+$nav-width: 230px !default; // width of the navbar
+$examples-width: 50% !default; // portion of the screen taken up by code examples
+$logo-margin: 0px !default; // margin below logo
+$main-padding: 28px !default; // padding to left and right of content & examples
+$nav-padding: 15px !default; // padding to left and right of navbar
+$nav-v-padding: 10px !default; // padding used vertically around search boxes and results
+$nav-indent: 10px !default; // extra padding for ToC subitems
+$code-annotation-padding: 13px !default; // padding inside code annotations
+$h1-margin-bottom: 21px !default; // padding under the largest header tags
+$tablet-width: 930px !default; // min width before reverting to tablet size
+$phone-width: $tablet-width - $nav-width !default; // min width before reverting to mobile size
+
+
+// FONTS
+////////////////////
+$font-default-family: 'Nunito', sans-serif !default;
+$font-default-size: 15px !default;
+$font-default-weight: 400 !default;
+
+$font-header-weight: 700 !default;
+
+$font-code-family: 'JetBrains Mono', monospace !default;
+$font-code-size: 12.5px !default;
+
+%default-font {
+  font-family: $font-default-family;
+  font-size: $font-default-size;
+  font-weight: $font-default-weight;
+}
+
+%header-font {
+  @extend %default-font;
+  font-weight: 700;
+}
+
+%code-font {
+  font-family: $font-code-family;
+  font-size: $font-code-size;
+  line-height: 1.5;
+}
+
+
+// OTHER
+////////////////////
+$nav-footer-border-color: #666666 !default;
+$search-box-border-color: #666666 !default;
+
+
+////////////////////////////////////////////////////////////////////////////////
+// INTERNAL
+////////////////////////////////////////////////////////////////////////////////
+// These settings are probably best left alone.
+
+%break-words {
+  word-break: break-all;
+  hyphens: auto;
+}

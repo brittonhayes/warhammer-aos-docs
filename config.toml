@@ -1,0 +1,73 @@
+title = "Warhammer REST API Docs"
+baseURL = "https://docs.aos-api.com"
+defaultContentLanguage = "en"
+
+disableKinds = ["taxonomyTerm"]
+
+# Code higlighting settings
+pygmentsCodefences = true
+pygmentsCodeFencesGuesSsyntax = false
+pygmentsOptions = ""
+pygmentsStyle = "rrt"
+pygmentsUseClasses = false
+
+# Markup Settings
+[markup]
+[markup.goldmark]
+[markup.goldmark.parser]
+autoHeadingIDType = "github-ascii"
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+search = true
+
+# Configure the language example tabs.
+[[params.language_tabs]]
+key = "shell"
+name = "Shell"
+[[params.language_tabs]]
+key = "go"
+name = "Go"
+
+#Languages
+[languages]
+
+[languages.en]
+languageName = "English"
+weight = 2
+title = "Warhammer - Age of Sigmar API Docs"
+
+# Left sidebar footer items. Use HTMl or Markdown.
+toc_footers = [
+    "[Go Docs](https://pkg.go.dev/github.com/brittonhayes/warhammer-aos)",
+    "[Contribute on Github](https://github.com/brittonhayes/warhammer-aos)"
+]
+
+[module]
+[module.hugoVersion]
+min = "0.56.0"
+[[module.imports]]
+path = "github.com/jquery/jquery-dist"
+[[module.imports.mounts]]
+source = "dist/jquery.js"
+target = "assets/js/slate/lib/_jquery.js"
+[[module.imports]]
+path = "github.com/olivernn/lunr.js"
+[[module.imports.mounts]]
+source = "lunr.js"
+target = "assets/js/slate/lib/_lunr.js"
+[[module.imports]]
+path = "github.com/slatedocs/slate"
+[[module.imports.mounts]]
+source = "source/images"
+target = "static/images"
+[[module.imports.mounts]]
+source = "source/fonts"
+target = "static/fonts"
+[[module.imports.mounts]]
+source = "source/stylesheets"
+target = "assets/scss/slate"
+[[module.imports.mounts]]
+source = "source/javascripts"
+target = "assets/js/slate"
